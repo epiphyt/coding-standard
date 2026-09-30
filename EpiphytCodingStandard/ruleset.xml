@@ -311,6 +311,7 @@
 		<exclude name="SlevomatCodingStandard.Operators.DisallowIncrementAndDecrementOperators.DisallowedPostIncrementOperator"/>
 		<exclude name="SlevomatCodingStandard.Operators.DisallowIncrementAndDecrementOperators.DisallowedPreDecrementOperator"/>
 		<exclude name="SlevomatCodingStandard.Operators.DisallowIncrementAndDecrementOperators.DisallowedPreIncrementOperator"/>
+		<exclude name="SlevomatCodingStandard.Operators.SpreadOperatorSpacing.IncorrectSpacesAfterOperator"/> <!-- Already handled by Universal.WhiteSpace.FirstClassCallableSpacing.SpacingAfter -->
 		<exclude name="SlevomatCodingStandard.PHP.DisallowReference.DisallowedAssigningByReference"/>
 		<exclude name="SlevomatCodingStandard.PHP.DisallowReference.DisallowedPassingByReference"/>
 		<exclude name="SlevomatCodingStandard.PHP.RequireExplicitAssertion.RequiredExplicitAssertion"/>
