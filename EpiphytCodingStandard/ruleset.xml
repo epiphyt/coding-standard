@@ -67,7 +67,7 @@
 		<exclude name="Generic.PHP.DisallowShortOpenTag.EchoFound"/>
 		<exclude name="PSR2.ControlStructures.ElseIfDeclaration.NotAllowed"/> <!-- Contrary to EpiphytCodingStandard.ControlStructures.ElseIfDeclaration -->
 		<exclude name="PSR2.ControlStructures.SwitchDeclaration.TerminatingComment"/>
-		<exclude name="Squiz.Functions.MultiLineFunctionDeclaration.SpaceAfterFunction"/> <!-- Allow closures like function( $x ) -->
+		<exclude name="Squiz.Functions.MultiLineFunctionDeclaration.SpaceAfterFunction"/> <!-- Contrary to EpiphytCodingStandard.Functions.ClosureKeywordSpacing -->
 		<exclude name="WordPress.Arrays.MultipleStatementAlignment"/>
 		<exclude name="WordPress.DB.PreparedSQLPlaceholders.UnsupportedIdentifierPlaceholder"/>
 		<exclude name="WordPress.DB.SlowDBQuery.slow_db_query_meta_key"/>
