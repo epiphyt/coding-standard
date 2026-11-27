@@ -49,18 +49,7 @@
 	<!-- Enforce PSR1 compatible namespaces. -->
 	<rule ref="PSR1.Classes.ClassDeclaration"/>
 	
-	<rule ref="PSR2">
-		<exclude name="PSR2"/>
-	</rule>
-	
 	<rule ref="PSR2.Methods.FunctionClosingBrace"/>
-	
-	<rule ref="Generic.Files.LineLength">
-		<properties>
-			<property name="lineLimit" value="80"/>
-			<property name="absoluteLineLimit" value="120"/>
-		</properties>
-	</rule>
 	
 	<rule ref="Universal">
 		<exclude name="Universal.Arrays.DisallowShortArraySyntax.Found"/>
@@ -75,6 +64,9 @@
 	<rule ref="PHPCompatibilityWP"/>
 	
 	<rule ref="WordPress">
+		<exclude name="Generic.PHP.DisallowShortOpenTag.EchoFound"/>
+		<exclude name="PSR2.ControlStructures.ElseIfDeclaration.NotAllowed"/> <!-- Contrary to EpiphytCodingStandard.ControlStructures.ElseIfDeclaration -->
+		<exclude name="PSR2.ControlStructures.SwitchDeclaration.TerminatingComment"/>
 		<exclude name="WordPress.Arrays.MultipleStatementAlignment"/>
 		<exclude name="WordPress.DB.PreparedSQLPlaceholders.UnsupportedIdentifierPlaceholder"/>
 		<exclude name="WordPress.DB.SlowDBQuery.slow_db_query_meta_key"/>
@@ -139,8 +131,10 @@
 		<exclude name="Generic.CodeAnalysis.ForLoopWithTestFunctionCall.NotAllowed"/>
 		<exclude name="Generic.CodeAnalysis.RequireExplicitBooleanOperatorPrecedence.MissingParentheses"/>
 		<exclude name="Generic.Commenting.DocComment"/>
+		<exclude name="Generic.Files.LineLength"/>
 		<exclude name="Generic.Formatting.MultipleStatementAlignment.NotSame"/>
 		<exclude name="Generic.NamingConventions.ConstructorName.OldStyle"/>
+		<exclude name="Generic.WhiteSpace.DisallowTabIndent"/>
 		<exclude name="PEAR.ControlStructures.MultiLineCondition.Alignment"/>
 		<exclude name="PEAR.ControlStructures.MultiLineCondition.SpacingAfterOpenBrace"/>
 		<exclude name="PEAR.ControlStructures.MultiLineCondition.StartWithBoolean"/>
@@ -172,7 +166,9 @@
 		<exclude name="Squiz.Strings.ConcatenationSpacing.PaddingFound"/>
 		<exclude name="Squiz.Strings.DoubleQuoteUsage.NotRequired"/>
 		<exclude name="Squiz.Strings.EchoedStrings.HasBracket"/>
+		<exclude name="Squiz.WhiteSpace.ControlStructureSpacing"/> <!-- Already handled by WordPress.WhiteSpace.ControlStructureSpacing and SlevomatCodingStandard.ControlStructures.BlockControlStructureSpacing -->
 		<exclude name="Squiz.WhiteSpace.FunctionClosingBraceSpace.SpacingBeforeClose"/>
+		<exclude name="Squiz.WhiteSpace.ScopeClosingBrace.ContentBefore"/> <!-- Allow empty function bodies like {} -->
 		<exclude name="Squiz.WhiteSpace.SuperfluousWhitespace.EndLine"/>
 		<exclude name="Universal.ControlStructures.DisallowAlternativeSyntax.FoundForeachWithInlineHTML"/>
 		<exclude name="Universal.ControlStructures.DisallowAlternativeSyntax.FoundIf"/>
@@ -236,15 +232,6 @@
 	<!-- Namespacing of `use` statements. -->
 	<rule ref="PSR2.Namespaces.UseDeclaration">
 		<exclude name="PSR2.Namespaces.UseDeclaration.MultipleDeclarations"/>
-	</rule>
-	
-	<!-- Remove Whitespace before line breaks -->
-	<rule ref="Generic.WhiteSpace.ScopeIndent">
-		<properties>
-			<property name="exact" value="true"/>
-			<property name="indent" value="4"/>
-			<property name="tabIndent" value="true"/>
-		</properties>
 	</rule>
 	
 	<!-- Disallow long array syntax. -->
